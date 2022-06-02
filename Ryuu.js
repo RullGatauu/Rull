@@ -322,7 +322,7 @@ fs.writeFileSync('./lib/rpg/healt.json', JSON.stringify(_healt))
 
 //Mess Dll
 mess = {
-limit: 'Limit Lu Abis Nyet', 
+limit: 'Limit Kamu habis', 
 wait: 'Tunggu Sedang Di Proses',
 eror: 'Terjadi Kesalahan',
 success: 'Success️',
@@ -420,20 +420,20 @@ if (healthCounts <= 0) return Ryuu.sendMessage(from,`Limit request anda sudah ha
 if (!isPetualang) return reply(mess.only.player)
  reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
 pp = monospace(`🌱 Profile User 🌱
-✾ Nama : ${pushname}
-✾ Rank : ${role}
-✾ Status : ${elit}
-✾ Uang : $${(getBalance(sender, balance))}
-✾ Xp : ${getLevelingXp(sender)}/${reqXp}
-✾ Level : ${getLevelingLevel(sender)}
-✾ Limit : ${getLimit(sender, limitCount, limit)}/${limitCount}
+❒ Nama : ${pushname}
+❒ Rank : ${role}
+❒ Status : ${elit}
+❒ Uang : $${(getBalance(sender, balance))}
+❒ Xp : ${getLevelingXp(sender)}/${reqXp}
+❒ Level : ${getLevelingLevel(sender)}
+❒ Limit : ${getLimit(sender, limitCount, limit)}/${limitCount}
  
 📪 Inventory 📪
-✾ Uang : $${(getBalance(sender, balance))}💰
-✾ Emas : ${getEmas(sender)}🪙
-✾ Besi : ${getBesi(sender)}⛓️
-✾ Berlian : ${getDm(sender)}💎
-✾ Ikan : ${getFish(sender)}🎣`)
+❒ Uang : $${(getBalance(sender, balance))}💰
+❒ Emas : ${getEmas(sender)}🪙
+❒ Besi : ${getBesi(sender)}⛓️
+❒ Berlian : ${getDm(sender)}💎
+❒ Ikan : ${getFish(sender)}🎣`)
 but = [{ buttonId: `!menu`, buttonText: { displayText: 'Back To Menu' }, type: 1 }]
 sendButton(from, pp, `Profile ${pushname}`, but)
 found = true
@@ -551,13 +551,13 @@ const isUser = cekUser(sender)
 const isRegistered = checkRegisteredUser(sender)
 const daftar1 = `Hai ${pushname}\nKamu Belum Terverifikasi Pencet Button Di Bawah Ini Untuk Verifikasi!!`
 const daftar2 = '```Klik Tombol Di Bawah Untuk Verify Kak```'
-const daftar3 = [{buttonId: `${prefix}verify`,buttonText: {displayText: `🌱 VERIFY 🌱`,},type: 1,},]
+const daftar3 = [{buttonId: `${prefix}verify`,buttonText: {displayText: `VERIFY🍥`,},type: 1,},]
 const createSerial = (size) => {
 return crypto.randomBytes(size).toString('hex').slice(0, size)
 }
 const Prem1 = `Hai ${pushname}\nKamu Belum Premium, minta ke owner agar bisa menggunakan fitur inii!!`
 const Prem2 = '```Nomor Owner Di Bawah Ini Kak```'
-const Prem3 = [{buttonId: `${prefix}owner`,buttonText: {displayText: `🌱 OWNER 🌱`,},type: 1,},]
+const Prem3 = [{buttonId: `${prefix}owner`,buttonText: {displayText: `OWNER ✨`,},type: 1,},]
 
 //Sticker Ngab
 const sendStickerFromUrl = async(to, url) => {
@@ -698,7 +698,7 @@ participant: `0@s.whatsapp.net`, ...(from ?
 },
 message: { 
 "videoMessage": { 
-"title": `Ryuuka Botz🐧`,
+"title": `Nagatoro Botz🌙`,
 "h": `${tampilUcapan} ${pushname}`,
 'duration': '99999', 
 'caption': `${tampilUcapan} ${pushname}`,
@@ -823,7 +823,7 @@ sendButMessage(from, ` *GROUP LINK DETECTED*\n\nMaaf Kamu Akan Di Kick Dari Grou
 {
 buttonId: `${prefix}antilink disable`,
 buttonText: {
-displayText: `Disable Antilink🌱`,
+displayText: `Disable Antilink🌙`,
 },
 type: 1,
 }]);
@@ -911,12 +911,12 @@ var getLevel = getLevelingLevel(sender)
 addLevelingXp(sender, amountXp)
 if (requiredXp <= getLevelingXp(sender)) {
 addLevelingLevel(sender, 1)   
-var lvlup = monospace(`🌱 Level Up 🌱
-✾ Nama : ${pushname}
-✾ Rank : ${role}
-✾ Status : ${elit}
-✾ Xp : ${getLevelingXp(sender)}
-✾ Level : ${getLevelingLevel(sender)}`)
+var lvlup = monospace(` Level Up ✨
+❒ Nama : ${pushname}
+❒ Rank : ${role}
+❒ Status : ${elit}
+❒ Xp : ${getLevelingXp(sender)}
+❒ Level : ${getLevelingLevel(sender)}`)
 but = [{ buttonId: `${prefix}menu`, buttonText: { displayText: 'Back To Menu' }, type: 1 }]
 sendButton(from, lvlup, 'Level Up', but)
 
@@ -963,7 +963,7 @@ tescok =
 🗃 _*Status*_ : ${public? `Public Mode`:`Self Mode`}
 
 *Info User* 👤
-🌱 _*Name User*_ : ${pushname}
+💭 _*Name User*_ : ${pushname}
 🏷 _*Bio User*_ : ${p.status==undefined?`Not Found`:p.status}
 📱 _*Nomor*_ : @${sender.split('@')[0]}`
  Sendbutdocument(from, tescok, "Create By RyuukaBotz", fs.readFileSync('./media/Ryuu.pdf'),{mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/Ryuu.jpg'), filename:`Ryuu.pdf`,pageCount: 999 }, [{buttonId:`${prefix}listmenu`,buttonText:{displayText:'LIST MENU 🌱'},type:1},{buttonId:`${prefix}allmenu`,buttonText:{displayText:'ALL MENU ⛩️'},type:1},{buttonId:`${prefix}script`,buttonText:{displayText:'SCRIPT 🎥'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [ptod,dtod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${tampilUcapan} ${pushname}\nScript Create By RyuukaBotz`,mediaType:"2",thumbnail:fakeimage,mediaUrl:`https://youtu.be/Q6utY1yaXAY`}}})
@@ -972,15 +972,15 @@ case 'listmenu':
 if (isBanned) return reply('Kamu Sudah Di banned!')
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: mek})  
 listMsg = {
-buttonText: 'Click Here!!!',
+buttonText: 'Klik Disini!!!',
 footerText: fake,
 description: `_*Hai Kak @${sender.split('@')[0]} ${tampilUcapan}*_\n\n_*Pencet Button Di bawah Ini Untuk Memilih Menu*_`, 
 sections: [
 {
-"title": `Silahkan Dipilih Kak ${pushname} 🤗`,
+"title": `Silahkan Dipilih Kak ${pushname} 🌸`,
 rows: [
 {
-"title": "[🕊️] All Menu",
+"title": "[🌳️] All Menu",
 "rowId": `${prefix}allmenu`,
 "description": `Menampilkan Seluruh Menu`
 },
@@ -990,7 +990,7 @@ rows: [
 "description": `Menampilkan Seluruh Other Menu`
 },
 {
-"title": "[🌱] Group Menu",
+"title": "[👒] Group Menu",
 "rowId": `${prefix}groupmenu`, 
 "description": `Menampilkan Seluruh Group Menu`
 },
@@ -1146,217 +1146,217 @@ ${tampilUcapan}
 💐 _*Tahun*_ : ${tahun}
 
 📱 _*Other Menu*_ 📱
-✾ ${prefix}infobot
-✾ ${prefix}donasi
-✾ ${prefix}rules
-✾ ${prefix}speed
-✾ ${prefix}script
-✾ ${prefix}verify
-✾ ${prefix}creator
+❒ ${prefix}infobot
+❒ ${prefix}donasi
+❒ ${prefix}rules
+❒ ${prefix}speed
+❒ ${prefix}script
+❒ ${prefix}verify
+❒ ${prefix}creator
 
-🌱 _*Group Menu*_ 🌱
-✾ ${prefix}welcome *on/off*
-✾ ${prefix}add *628xxx*
-✾ ${prefix}kick *@tag*
-✾ ${prefix}linkgc
-✾ ${prefix}setppgrup *reply image*
-✾ ${prefix}setnamegrup *text*
-✾ ${prefix}setdesc *text*
+✨ _*Group Menu*_ ✨
+❒ ${prefix}welcome *on/off*
+❒ ${prefix}add *628xxx*
+❒ ${prefix}kick *@tag*
+❒ ${prefix}linkgc
+❒ ${prefix}setppgrup *reply image*
+❒ ${prefix}setnamegrup *text*
+❒ ${prefix}setdesc *text*
 
 👤 _*Owner Menu*_ 👤
-✾ ${prefix}mode
-✾ ${prefix}public
-✾ ${prefix}self
-✾ ${prefix}owner
-✾ ${prefix}delete
-✾ ${prefix}bc *text*
-✾ ${prefix}setnamabot
-✾ ${prefix}setbiobot
-✾ ${prefix}addcmd *reply sticker*
-✾ ${prefix}delcmd *reply sticker*
-✾ ${prefix}listcmd
-✾ ${prefix}addprem / delprem
-✾ ${prefix}ban / unban
+❒ ${prefix}mode
+❒ ${prefix}public
+❒ ${prefix}self
+❒ ${prefix}owner
+❒ ${prefix}delete
+❒ ${prefix}bc *text*
+❒ ${prefix}setnamabot
+❒ ${prefix}setbiobot
+❒ ${prefix}addcmd *reply sticker*
+❒ ${prefix}delcmd *reply sticker*
+❒ ${prefix}listcmd
+❒ ${prefix}addprem / delprem
+❒ ${prefix}ban / unban
 
 🔎 _*Search Menu*_ 🔎
-✾ ${prefix}pinterest *search*
-✾ ${prefix}liriklagu *search*
-✾ ${prefix}chordlagu *search*
+❒ ${prefix}pinterest *search*
+❒ ${prefix}liriklagu *search*
+❒ ${prefix}chordlagu *search*
 
 🎙 _*Voice Changer*_
-✾ ${prefix}vibra
-✾ ${prefix}robot
-✾ ${prefix}fast
-✾ ${prefix}slow
-✾ ${prefix}bass
+❒ ${prefix}vibra
+❒ ${prefix}robot
+❒ ${prefix}fast
+❒ ${prefix}slow
+❒ ${prefix}bass
 
 💸 _*Store Menu*_ 💸
-✾ ${prefix}valorant
-✾ ${prefix}mobilelejend
-✾ ${prefix}freefire
-✾ ${prefix}codm
-✾ ${prefix}aov
-✾ ${prefix}sausage
-✾ ${prefix}lol
-✾ ${prefix}pay
+❒ ${prefix}valorant
+❒ ${prefix}mobilelejend
+❒ ${prefix}freefire
+❒ ${prefix}codm
+❒ ${prefix}aov
+❒ ${prefix}sausage
+❒ ${prefix}lol
+❒ ${prefix}pay
 
 🏝 _*Random Menu*_ 🏝
-✾ ${prefix}meme
-✾ ${prefix}pantun
-✾ ${prefix}katabijak
-✾ ${prefix}faktaunik
-✾ ${prefix}quotes
-✾ ${prefix}artinama
-✾ ${prefix}artimimpi
+❒ ${prefix}meme
+❒ ${prefix}pantun
+❒ ${prefix}katabijak
+❒ ${prefix}faktaunik
+❒ ${prefix}quotes
+❒ ${prefix}artinama
+❒ ${prefix}artimimpi
 
 🖼 _*Random Image*_ 🖼
-✾ ${prefix}cyberspace
-✾ ${prefix}teknologi
-✾ ${prefix}tatasurya
-✾ ${prefix}gaming
-✾ ${prefix}anime
+❒ ${prefix}cyberspace
+❒ ${prefix}teknologi
+❒ ${prefix}tatasurya
+❒ ${prefix}gaming
+❒ ${prefix}anime
 
 🎮 _*Game Menu*_ 🎮
-✾ ${prefix}caklontong
-✾ ${prefix}tebakgambar
-✾ ${prefix}tebakkata
-✾ ${prefix}tebaklirik
-✾ ${prefix}tebakjenaka
-✾ ${prefix}tebakkimia
-✾ ${prefix}tebakbendera
-✾ ${prefix}tictactoe
-✾ ${prefix}delsesittt
+❒ ${prefix}caklontong
+❒ ${prefix}tebakgambar
+❒ ${prefix}tebakkata
+❒ ${prefix}tebaklirik
+❒ ${prefix}tebakjenaka
+❒ ${prefix}tebakkimia
+❒ ${prefix}tebakbendera
+❒ ${prefix}tictactoe
+❒ ${prefix}delsesittt
 
 🏔 _*Rpg Menu*_ 🏔
-✾ ${prefix}event *on/off*
-✾ ${prefix}profile
-✾ ${prefix}mybag
-✾ ${prefix}leaderboard
-✾ ${prefix}sellikan
-✾ ${prefix}sellbesi
-✾ ${prefix}sellemas
-✾ ${prefix}selldiamond
-✾ ${prefix}mancing
-✾ ${prefix}adventure
+❒ ${prefix}event *on/off*
+❒ ${prefix}profile
+❒ ${prefix}mybag
+❒ ${prefix}leaderboard
+❒ ${prefix}sellikan
+❒ ${prefix}sellbesi
+❒ ${prefix}sellemas
+❒ ${prefix}selldiamond
+❒ ${prefix}mancing
+❒ ${prefix}adventure
 
 🚲 _*Fun Menu*_ 🚲
-✾ ${prefix}bagaimanakah
-✾ ${prefix}truth
-✾ ${prefix}dare
-✾ ${prefix}slot
-✾ ${prefix}kapankah
-✾ ${prefix}bisakah
-✾ ${prefix}rate
-✾ ${prefix}apakah
-✾ ${prefix}suit
+❒ ${prefix}bagaimanakah
+❒ ${prefix}truth
+❒ ${prefix}dare
+❒ ${prefix}slot
+❒ ${prefix}kapankah
+❒ ${prefix}bisakah
+❒ ${prefix}rate
+❒ ${prefix}apakah
+❒ ${prefix}suit
 
 💽 _*Sound Menu*_ 💽
-✾ ${prefix}sound1
-✾ ${prefix}sound2
-✾ ${prefix}sound3
-✾ ${prefix}sound4
-✾ ${prefix}sound5
+❒ ${prefix}sound1
+❒ ${prefix}sound2
+❒ ${prefix}sound3
+❒ ${prefix}sound4
+❒ ${prefix}sound5
 
 ☕ _*Maker Menu*_ ☕
-✾ ${prefix}rip
-✾ ${prefix}jail
-✾ ${prefix}wasted
-✾ ${prefix}wanted
+❒ ${prefix}rip
+❒ ${prefix}jail
+❒ ${prefix}wasted
+❒ ${prefix}wanted
 
 🖋 _*Textprome Menu*_ 🖋
-✾ ${prefix}honey
-✾ ${prefix}ice
-✾ ${prefix}bread
-✾ ${prefix}glossy
-✾ ${prefix}magma
+❒ ${prefix}honey
+❒ ${prefix}ice
+❒ ${prefix}bread
+❒ ${prefix}glossy
+❒ ${prefix}magma
 
 🗓 _*Informasi Menu*_ 🗓
-✾ ${prefix}infotsunami
-✾ ${prefix}covidglobal
-✾ ${prefix}cuacabandara
-✾ ${prefix}infogempa
+❒ ${prefix}infotsunami
+❒ ${prefix}covidglobal
+❒ ${prefix}cuacabandara
+❒ ${prefix}infogempa
 
 👩‍🦰 _*Cecan Menu*_ 👩‍🦰
-✾ ${prefix}vietnam
-✾ ${prefix}malaysia
-✾ ${prefix}korea
-✾ ${prefix}indonesia
-✾ ${prefix}japan
-✾ ${prefix}thailand
-✾ ${prefix}china
+❒ ${prefix}vietnam
+❒ ${prefix}malaysia
+❒ ${prefix}korea
+❒ ${prefix}indonesia
+❒ ${prefix}japan
+❒ ${prefix}thailand
+❒ ${prefix}china
 
 💅 _*Asupan Menu*_ 💅
-✾ ${prefix}santuy
-✾ ${prefix}ukty
-✾ ${prefix}bocil
-✾ ${prefix}gheayubi
-✾ ${prefix}rikagusriani
+❒ ${prefix}santuy
+❒ ${prefix}ukty
+❒ ${prefix}bocil
+❒ ${prefix}gheayubi
+❒ ${prefix}rikagusriani
 
 🔞 _*Nsfw Menu*_ 🔞
-✾ ${prefix}yuri
-✾ ${prefix}thighs
-✾ ${prefix}ero
-✾ ${prefix}cum
-✾ ${prefix}ass
-✾ ${prefix}blowjob
+❒ ${prefix}yuri
+❒ ${prefix}thighs
+❒ ${prefix}ero
+❒ ${prefix}cum
+❒ ${prefix}ass
+❒ ${prefix}blowjob
 
 📝 _*Nulis Menu*_ 📝
-✾ ${prefix}nulis
-✾ ${prefix}nuliskiri *text*
-✾ ${prefix}nuliskanan *text*
-✾ ${prefix}foliokiri *text*
-✾ ${prefix}foliokanan *text*
+❒ ${prefix}nulis
+❒ ${prefix}nuliskiri *text*
+❒ ${prefix}nuliskanan *text*
+❒ ${prefix}foliokiri *text*
+❒ ${prefix}foliokanan *text*
 
 🗃 _*Download Menu*_ 🗃
-✾ ${prefix}ytmp3 *url*
-✾ ${prefix}ytmp4 *url*
-✾ ${prefix}tiktoknowm *url*
-✾ ${prefix}tiktokwm *url*
-✾ ${prefix}mediafire *url*
+❒ ${prefix}ytmp3 *url*
+❒ ${prefix}ytmp4 *url*
+❒ ${prefix}tiktoknowm *url*
+❒ ${prefix}tiktokwm *url*
+❒ ${prefix}mediafire *url*
 
 💾 _*Convert Menu*_ 💾
-✾ ${prefix}sticker *reply*
-✾ ${prefix}attp *text*
-✾ ${prefix}ttp *text*
-✾ ${prefix}toimg *reply*
-✾ ${prefix}tourl *reply*
-✾ ${prefix}smeme *reply image & text*
-✾ ${prefix}emoji *reply emoji*
+❒ ${prefix}sticker *reply*
+❒ ${prefix}attp *text*
+❒ ${prefix}ttp *text*
+❒ ${prefix}toimg *reply*
+❒ ${prefix}tourl *reply*
+❒ ${prefix}smeme *reply image & text*
+❒ ${prefix}emoji *reply emoji*
 
 ⛩️ _*Anime Menu*_ ⛩️
-✾ ${prefix}neko
-✾ ${prefix}waifu
-✾ ${prefix}shinobu
-✾ ${prefix}megumin
-✾ ${prefix}bully
-✾ ${prefix}cuddle
-✾ ${prefix}cry
-✾ ${prefix}hug
-✾ ${prefix}awoo
-✾ ${prefix}kiss
-✾ ${prefix}lick
-✾ ${prefix}pat
-✾ ${prefix}smug
-✾ ${prefix}bonk
-✾ ${prefix}yeet
-✾ ${prefix}blush
-✾ ${prefix}smile
-✾ ${prefix}wave
-✾ ${prefix}highfive
-✾ ${prefix}handhold
-✾ ${prefix}nom
-✾ ${prefix}bite
-✾ ${prefix}glomp
-✾ ${prefix}slap
-✾ ${prefix}kill
-✾ ${prefix}happy
-✾ ${prefix}wink
-✾ ${prefix}poke
-✾ ${prefix}dance
-✾ ${prefix}cringe`
+❒ ${prefix}neko
+❒ ${prefix}waifu
+❒ ${prefix}shinobu
+❒ ${prefix}megumin
+❒ ${prefix}bully
+❒ ${prefix}cuddle
+❒ ${prefix}cry
+❒ ${prefix}hug
+❒ ${prefix}awoo
+❒ ${prefix}kiss
+❒ ${prefix}lick
+❒ ${prefix}pat
+❒ ${prefix}smug
+❒ ${prefix}bonk
+❒ ${prefix}yeet
+❒ ${prefix}blush
+❒ ${prefix}smile
+❒ ${prefix}wave
+❒ ${prefix}highfive
+❒ ${prefix}handhold
+❒ ${prefix}nom
+❒ ${prefix}bite
+❒ ${prefix}glomp
+❒ ${prefix}slap
+❒ ${prefix}kill
+❒ ${prefix}happy
+❒ ${prefix}wink
+❒ ${prefix}poke
+❒ ${prefix}dance
+❒ ${prefix}cringe`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 🌙' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🍥' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'othermenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1373,21 +1373,21 @@ menu =
 🗃 _*Status*_ : ${public? `Public Mode`:`Self Mode`}
 
 👤 *Info User* 👤
-🌱 _*Name User*_ : ${pushname}
+🌙 _*Name User*_ : ${pushname}
 🏷 _*Bio User*_ : ${p.status==undefined?`Not Found`:p.status}
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 📱 _*Other Menu*_ 📱
-✾ ${prefix}infobot
-✾ ${prefix}donasi
-✾ ${prefix}rules
-✾ ${prefix}speed
-✾ ${prefix}script
-✾ ${prefix}verify
-✾ ${prefix}creator`
+❒ ${prefix}infobot
+❒ ${prefix}donasi
+❒ ${prefix}rules
+❒ ${prefix}speed
+❒ ${prefix}script
+❒ ${prefix}verify
+❒ ${prefix}creator`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'groupmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1409,16 +1409,16 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🌱 _*Group Menu*_ 🌱
-✾ ${prefix}welcome *on/off*
-✾ ${prefix}add *628xxx*
-✾ ${prefix}kick *@tag*
-✾ ${prefix}linkgc
-✾ ${prefix}setppgrup *reply image*
-✾ ${prefix}setnamegrup *text*
-✾ ${prefix}setdesc *text*`
+❒ ${prefix}welcome *on/off*
+❒ ${prefix}add *628xxx*
+❒ ${prefix}kick *@tag*
+❒ ${prefix}linkgc
+❒ ${prefix}setppgrup *reply image*
+❒ ${prefix}setnamegrup *text*
+❒ ${prefix}setdesc *text*`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI ✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'ownermenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1440,22 +1440,22 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 👤 _*Owner Menu*_ 👤
-✾ ${prefix}mode
-✾ ${prefix}public
-✾ ${prefix}self
-✾ ${prefix}owner
-✾ ${prefix}delete
-✾ ${prefix}bc *text*
-✾ ${prefix}setnamabot
-✾ ${prefix}setbiobot
-✾ ${prefix}addcmd *reply sticker*
-✾ ${prefix}delcmd *reply sticker*
-✾ ${prefix}listcmd
-✾ ${prefix}addprem / delprem
-✾ ${prefix}ban / unban`
+❒ ${prefix}mode
+❒ ${prefix}public
+❒ ${prefix}self
+❒ ${prefix}owner
+❒ ${prefix}delete
+❒ ${prefix}bc *text*
+❒ ${prefix}setnamabot
+❒ ${prefix}setbiobot
+❒ ${prefix}addcmd *reply sticker*
+❒ ${prefix}delcmd *reply sticker*
+❒ ${prefix}listcmd
+❒ ${prefix}addprem / delprem
+❒ ${prefix}ban / unban`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI ✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'searchmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1477,12 +1477,12 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🔎 _*Search Menu*_ 🔎
-✾ ${prefix}pinterest *search*
-✾ ${prefix}liriklagu *search*
-✾ ${prefix}chordlagu *search*`
+❒ ${prefix}pinterest *search*
+❒ ${prefix}liriklagu *search*
+❒ ${prefix}chordlagu *search*`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI ✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'voice changer':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1504,14 +1504,14 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🎙 _*Voice Changer*_
-✾ ${prefix}vibra
-✾ ${prefix}robot
-✾ ${prefix}fast
-✾ ${prefix}slow
-✾ ${prefix}bass`
+❒ ${prefix}vibra
+❒ ${prefix}robot
+❒ ${prefix}fast
+❒ ${prefix}slow
+❒ ${prefix}bass`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'randommenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1533,16 +1533,16 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🏝 _*Random Menu*_ 🏝
-✾ ${prefix}meme
-✾ ${prefix}pantun
-✾ ${prefix}katabijak
-✾ ${prefix}faktaunik
-✾ ${prefix}quotes
-✾ ${prefix}artinama
-✾ ${prefix}artimimpi`
+❒ ${prefix}meme
+❒ ${prefix}pantun
+❒ ${prefix}katabijak
+❒ ${prefix}faktaunik
+❒ ${prefix}quotes
+❒ ${prefix}artinama
+❒ ${prefix}artimimpi`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'randomimgmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1564,14 +1564,14 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🖼 _*Random Image*_ 🖼
-✾ ${prefix}cyberspace
-✾ ${prefix}teknologi
-✾ ${prefix}tatasurya
-✾ ${prefix}gaming
-✾ ${prefix}anime`
+❒ ${prefix}cyberspace
+❒ ${prefix}teknologi
+❒ ${prefix}tatasurya
+❒ ${prefix}gaming
+❒ ${prefix}anime`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'gamemenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1593,18 +1593,18 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🎮 _*Game Menu*_ 🎮
-✾ ${prefix}caklontong
-✾ ${prefix}tebakgambar
-✾ ${prefix}tebakkata
-✾ ${prefix}tebaklirik
-✾ ${prefix}tebakjenaka
-✾ ${prefix}tebakkimia
-✾ ${prefix}tebakbendera
-✾ ${prefix}tictactoe
-✾ ${prefix}delsesittt`
+❒ ${prefix}caklontong
+❒ ${prefix}tebakgambar
+❒ ${prefix}tebakkata
+❒ ${prefix}tebaklirik
+❒ ${prefix}tebakjenaka
+❒ ${prefix}tebakkimia
+❒ ${prefix}tebakbendera
+❒ ${prefix}tictactoe
+❒ ${prefix}delsesittt`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'rpgmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1626,19 +1626,19 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🏔 _*Rpg Menu*_ 🏔
-✾ ${prefix}event *on/off*
-✾ ${prefix}profile
-✾ ${prefix}mybag
-✾ ${prefix}leaderboard
-✾ ${prefix}sellikan
-✾ ${prefix}sellbesi
-✾ ${prefix}sellemas
-✾ ${prefix}selldiamond
-✾ ${prefix}mancing
-✾ ${prefix}adventure`
+❒ ${prefix}event *on/off*
+❒ ${prefix}profile
+❒ ${prefix}mybag
+❒ ${prefix}leaderboard
+❒ ${prefix}sellikan
+❒ ${prefix}sellbesi
+❒ ${prefix}sellemas
+❒ ${prefix}selldiamond
+❒ ${prefix}mancing
+❒ ${prefix}adventure`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'funmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1660,18 +1660,18 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🚲 _*Fun Menu*_ 🚲
-✾ ${prefix}bagaimanakah
-✾ ${prefix}truth
-✾ ${prefix}dare
-✾ ${prefix}slot
-✾ ${prefix}kapankah
-✾ ${prefix}bisakah
-✾ ${prefix}rate
-✾ ${prefix}apakah
-✾ ${prefix}suit`
+❒ ${prefix}bagaimanakah
+❒ ${prefix}truth
+❒ ${prefix}dare
+❒ ${prefix}slot
+❒ ${prefix}kapankah
+❒ ${prefix}bisakah
+❒ ${prefix}rate
+❒ ${prefix}apakah
+❒ ${prefix}suit`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'makermenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1693,13 +1693,13 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 ☕ _*Maker Menu*_ ☕
-✾ ${prefix}rip
-✾ ${prefix}jail
-✾ ${prefix}wasted
-✾ ${prefix}wanted`
+❒ ${prefix}rip
+❒ ${prefix}jail
+❒ ${prefix}wasted
+❒ ${prefix}wanted`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'textpromemenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1721,14 +1721,14 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🖋 _*Textprome Menu*_ 🖋
-✾ ${prefix}honey
-✾ ${prefix}ice
-✾ ${prefix}bread
-✾ ${prefix}glossy
-✾ ${prefix}magma`
+❒ ${prefix}honey
+❒ ${prefix}ice
+❒ ${prefix}bread
+❒ ${prefix}glossy
+❒ ${prefix}magma`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'informasimenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1750,13 +1750,13 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🗓 _*Informasi Menu*_ 🗓
-✾ ${prefix}infotsunami
-✾ ${prefix}covidglobal
-✾ ${prefix}cuacabandara
-✾ ${prefix}infogempa`
+❒ ${prefix}infotsunami
+❒ ${prefix}covidglobal
+❒ ${prefix}cuacabandara
+❒ ${prefix}infogempa`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'cecanmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1778,16 +1778,16 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 👩‍🦰 _*Cecan Menu*_ 👩‍🦰
-✾ ${prefix}vietnam
-✾ ${prefix}malaysia
-✾ ${prefix}korea
-✾ ${prefix}indonesia
-✾ ${prefix}japan
-✾ ${prefix}thailand
-✾ ${prefix}china`
+❒ ${prefix}vietnam
+❒ ${prefix}malaysia
+❒ ${prefix}korea
+❒ ${prefix}indonesia
+❒ ${prefix}japan
+❒ ${prefix}thailand
+❒ ${prefix}china`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'asupanmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1809,14 +1809,14 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 💅 _*Asupan Menu*_ 💅
-✾ ${prefix}santuy
-✾ ${prefix}ukty
-✾ ${prefix}bocil
-✾ ${prefix}gheayubi
-✾ ${prefix}rikagusriani`
+❒ ${prefix}santuy
+❒ ${prefix}ukty
+❒ ${prefix}bocil
+❒ ${prefix}gheayubi
+❒ ${prefix}rikagusriani`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'nsfwmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1838,15 +1838,15 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🔞 _*Nsfw Menu*_ 🔞
-✾ ${prefix}yuri
-✾ ${prefix}thighs
-✾ ${prefix}ero
-✾ ${prefix}cum
-✾ ${prefix}ass
-✾ ${prefix}blowjob`
+❒ ${prefix}yuri
+❒ ${prefix}thighs
+❒ ${prefix}ero
+❒ ${prefix}cum
+❒ ${prefix}ass
+❒ ${prefix}blowjob`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'nulismenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1868,14 +1868,14 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 📝 _*Nulis Menu*_ 📝
-✾ ${prefix}nulis
-✾ ${prefix}nuliskiri *text*
-✾ ${prefix}nuliskanan *text*
-✾ ${prefix}foliokiri *text*
-✾ ${prefix}foliokanan *text*`
+❒ ${prefix}nulis
+❒ ${prefix}nuliskiri *text*
+❒ ${prefix}nuliskanan *text*
+❒ ${prefix}foliokiri *text*
+❒ ${prefix}foliokanan *text*`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'downloadmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1897,14 +1897,14 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 🗃 _*Download Menu*_ 🗃
-✾ ${prefix}ytmp3 *url*
-✾ ${prefix}ytmp4 *url*
-✾ ${prefix}tiktoknowm *url*
-✾ ${prefix}tiktokwm *url*
-✾ ${prefix}mediafire *url*`
+❒ ${prefix}ytmp3 *url*
+❒ ${prefix}ytmp4 *url*
+❒ ${prefix}tiktoknowm *url*
+❒ ${prefix}tiktokwm *url*
+❒ ${prefix}mediafire *url*`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'convertmenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1926,16 +1926,16 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 💾 _*Convert Menu*_ 💾
-✾ ${prefix}sticker *reply*
-✾ ${prefix}attp *text*
-✾ ${prefix}ttp *text*
-✾ ${prefix}toimg *reply*
-✾ ${prefix}tourl *reply*
-✾ ${prefix}smeme *reply image & text*
-✾ ${prefix}emoji *reply emoji*`
+❒ ${prefix}sticker *reply*
+❒ ${prefix}attp *text*
+❒ ${prefix}ttp *text*
+❒ ${prefix}toimg *reply*
+❒ ${prefix}tourl *reply*
+❒ ${prefix}smeme *reply image & text*
+❒ ${prefix}emoji *reply emoji*`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'animemenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -1957,39 +1957,39 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 ⛩️ _*Anime Menu*_ ⛩️
-✾ ${prefix}neko
-✾ ${prefix}waifu
-✾ ${prefix}shinobu
-✾ ${prefix}megumin
-✾ ${prefix}bully
-✾ ${prefix}cuddle
-✾ ${prefix}cry
-✾ ${prefix}hug
-✾ ${prefix}awoo
-✾ ${prefix}kiss
-✾ ${prefix}lick
-✾ ${prefix}pat
-✾ ${prefix}smug
-✾ ${prefix}bonk
-✾ ${prefix}yeet
-✾ ${prefix}blush
-✾ ${prefix}smile
-✾ ${prefix}wave
-✾ ${prefix}highfive
-✾ ${prefix}handhold
-✾ ${prefix}nom
-✾ ${prefix}bite
-✾ ${prefix}glomp
-✾ ${prefix}slap
-✾ ${prefix}kill
-✾ ${prefix}happy
-✾ ${prefix}wink
-✾ ${prefix}poke
-✾ ${prefix}dance
-✾ ${prefix}cringe`
+❒ ${prefix}neko
+❒ ${prefix}waifu
+❒ ${prefix}shinobu
+❒ ${prefix}megumin
+❒ ${prefix}bully
+❒ ${prefix}cuddle
+❒ ${prefix}cry
+❒ ${prefix}hug
+❒ ${prefix}awoo
+❒ ${prefix}kiss
+❒ ${prefix}lick
+❒ ${prefix}pat
+❒ ${prefix}smug
+❒ ${prefix}bonk
+❒ ${prefix}yeet
+❒ ${prefix}blush
+❒ ${prefix}smile
+❒ ${prefix}wave
+❒ ${prefix}highfive
+❒ ${prefix}handhold
+❒ ${prefix}nom
+❒ ${prefix}bite
+❒ ${prefix}glomp
+❒ ${prefix}slap
+❒ ${prefix}kill
+❒ ${prefix}happy
+❒ ${prefix}wink
+❒ ${prefix}poke
+❒ ${prefix}dance
+❒ ${prefix}cringe`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'storemenu':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -2011,17 +2011,17 @@ menu =
 📱 _*Nomor*_ : @${sender.split('@')[0]}
 
 💸 _*Store Menu*_ 💸
-✾ ${prefix}valorant
-✾ ${prefix}mobilelejend
-✾ ${prefix}freefire
-✾ ${prefix}codm
-✾ ${prefix}aov
-✾ ${prefix}sausage
-✾ ${prefix}lol
-✾ ${prefix}pay`
+❒ ${prefix}valorant
+❒ ${prefix}mobilelejend
+❒ ${prefix}freefire
+❒ ${prefix}codm
+❒ ${prefix}aov
+❒ ${prefix}sausage
+❒ ${prefix}lol
+❒ ${prefix}pay`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 //Fitur Maker
 case 'wanted':
@@ -2116,7 +2116,7 @@ function _0x314012(_0x6b66e5,_0x1f5ff4,_0x51e1c4,_0x41d23b){return _0x2e95(_0x51
 break
 case 'mode':
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner) 
-buttonss = [{buttonId: `${prefix}public`, buttonText: {displayText: 'PUBLIC 🌱'}, type: 1},{buttonId: `${prefix}self`, buttonText: {displayText: 'SELF 🍂'}, type: 1}]
+buttonss = [{buttonId: `${prefix}public`, buttonText: {displayText: 'PUBLIC 💭'}, type: 1},{buttonId: `${prefix}self`, buttonText: {displayText: 'SELF 🍂'}, type: 1}]
 const buMess = {
 contentText: "SELF/PUBLIC",
 footerText: 'Silahkan Pilih Saah Satu',
@@ -2135,7 +2135,7 @@ case 'public':
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner) 
 if (public)return reply('*_Fitur Itu Sudah Di Aktifkan🌱_*')
 public = true
-return reply(`Success Mode Public 🌱\nDimana Semua User Bisa Menggunakan Bot`, text)
+return reply(`Success Mode Public ✨\nDimana Semua User Bisa Menggunakan Bot`, text)
 break
 case 'bc': case 'broadcast':
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner) 
@@ -2155,7 +2155,7 @@ Ryuu.sendMessage(_.jid,
 "footerText": `${tampilTanggal}`, 
 "buttons": [
 {"buttonId": `${prefix}menu`,
-"buttonText": {"displayText": "MENU 🌱"
+"buttonText": {"displayText": "MENU 🌸"
 },"type": "RESPONSE"}
 ], "headerType": 'LOCATION',
 locationMessage: { degreesLatitude: '',
@@ -2228,7 +2228,7 @@ Versi HP : ${device_model}
 Browser : ${Ryuu.browserDescription}`
 teks =
 `${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER ✨' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 } catch (e){
 reply(`${e}`)
 }
@@ -2244,7 +2244,7 @@ reply(`_*Speed Test*_\nMerespon dalam ${latensie.toFixed(4)} Sec 💬`)
 break
 case 'sc':
 case 'script':
-var _0xd8c6cb=_0x5a1e;(function(_0x25350d,_0x2c8ec9){var _0xd6afb9=_0x5a1e,_0x5cd850=_0x25350d();while(!![]){try{var _0x554323=-parseInt(_0xd6afb9(0x1b1))/0x1+-parseInt(_0xd6afb9(0x199))/0x2+-parseInt(_0xd6afb9(0x1b5))/0x3*(-parseInt(_0xd6afb9(0x1a9))/0x4)+-parseInt(_0xd6afb9(0x1a0))/0x5*(parseInt(_0xd6afb9(0x1b8))/0x6)+-parseInt(_0xd6afb9(0x1a7))/0x7+parseInt(_0xd6afb9(0x1b7))/0x8*(-parseInt(_0xd6afb9(0x1a3))/0x9)+-parseInt(_0xd6afb9(0x198))/0xa*(-parseInt(_0xd6afb9(0x1aa))/0xb);if(_0x554323===_0x2c8ec9)break;else _0x5cd850['push'](_0x5cd850['shift']());}catch(_0x46a82c){_0x5cd850['push'](_0x5cd850['shift']());}}}(_0x9913,0x809e6));var _0x172467=(function(){var _0x191eff=!![];return function(_0x111ab7,_0x23670f){var _0x45259b=_0x191eff?function(){var _0x51e2a6=_0x5a1e;if(_0x23670f){var _0x47fc84=_0x23670f[_0x51e2a6(0x1a5)](_0x111ab7,arguments);return _0x23670f=null,_0x47fc84;}}:function(){};return _0x191eff=![],_0x45259b;};}()),_0x1ef536=_0x172467(this,function(){var _0x34de46=_0x5a1e;return _0x1ef536[_0x34de46(0x1b2)]()[_0x34de46(0x1b6)](_0x34de46(0x195))[_0x34de46(0x1b2)]()[_0x34de46(0x1b3)](_0x1ef536)[_0x34de46(0x1b6)]('(((.+)+)+)+$');});_0x1ef536();var _0x2f7199=(function(){var _0x13531f=!![];return function(_0x428ed5,_0x5514c2){var _0x2e64d6=_0x13531f?function(){var _0x53c8c6=_0x5a1e;if(_0x5514c2){var _0x15ac1f=_0x5514c2[_0x53c8c6(0x1a5)](_0x428ed5,arguments);return _0x5514c2=null,_0x15ac1f;}}:function(){};return _0x13531f=![],_0x2e64d6;};}()),_0x2b6bce=_0x2f7199(this,function(){var _0x3b0916=_0x5a1e,_0x1b572c=function(){var _0x5762bd=_0x5a1e,_0x3b6647;try{_0x3b6647=Function(_0x5762bd(0x1b4)+_0x5762bd(0x1ad)+');')();}catch(_0x2851c6){_0x3b6647=window;}return _0x3b6647;},_0x58d85f=_0x1b572c(),_0x5e4210=_0x58d85f['console']=_0x58d85f[_0x3b0916(0x194)]||{},_0x2580ca=[_0x3b0916(0x19a),_0x3b0916(0x197),_0x3b0916(0x1a8),_0x3b0916(0x1ac),_0x3b0916(0x19e),_0x3b0916(0x1ae),_0x3b0916(0x19c)];for(var _0x4d73d5=0x0;_0x4d73d5<_0x2580ca[_0x3b0916(0x19d)];_0x4d73d5++){var _0x11537f=_0x2f7199[_0x3b0916(0x1b3)][_0x3b0916(0x1a2)][_0x3b0916(0x1a6)](_0x2f7199),_0x303fe5=_0x2580ca[_0x4d73d5],_0x4263c8=_0x5e4210[_0x303fe5]||_0x11537f;_0x11537f[_0x3b0916(0x196)]=_0x2f7199[_0x3b0916(0x1a6)](_0x2f7199),_0x11537f['toString']=_0x4263c8[_0x3b0916(0x1b2)]['bind'](_0x4263c8),_0x5e4210[_0x303fe5]=_0x11537f;}});function _0x5a1e(_0x1122e0,_0x8cdcdd){var _0x299127=_0x9913();return _0x5a1e=function(_0x2b6bce,_0x2f7199){_0x2b6bce=_0x2b6bce-0x194;var _0x3ba6d5=_0x299127[_0x2b6bce];return _0x3ba6d5;},_0x5a1e(_0x1122e0,_0x8cdcdd);}_0x2b6bce();if(!isUser)return sendButRegis(from,daftar1,daftar2,daftar3,{'quoted':troli});menu='*Info\x20Script*\x20🔎\x0a📚\x20Script\x20Made\x20By\x20Ryuuka\x20Botz\x0a🌱\x20Version\x20:\x202.0.0\x20(last)\x0a📈\x20Last\x20Update\x20:\x206/3/22\x0a📩\x20Link\x20Sc\x20:\x20https://youtube.com/channel/UCjxavxEQa1Wd9A4J9tOmATA\x0a♨️\x20Sumber\x20Script\x20:\x20Ryuuka\x20Botz\x0a\x0a🍁\x20Subscribe\x20For\x20More\x20Update',teks=botname+_0xd8c6cb(0x1a1)+runtime(process[_0xd8c6cb(0x1af)]())+_0xd8c6cb(0x19b)+ownername,Ryuu[_0xd8c6cb(0x1a4)](from,{'contentText':''+menu,'footerText':''+teks,'buttons':[{'buttonId':prefix+_0xd8c6cb(0x1b0),'buttonText':{'displayText':_0xd8c6cb(0x1ab)},'type':0x1},{'buttonId':prefix+'owner','buttonText':{'displayText':'OWNER\x20👤'},'type':0x1}],'headerType':'LOCATION','locationMessage':{'degreesLatitude':'','degreesLongitude':'','jpegThumbnail':fakeimage,'contextInfo':{'mentionedJid':[sender]}}},_0xd8c6cb(0x19f));function _0x9913(){var _0x2dcfe6=['toString','constructor','return\x20(function()\x20','6BUAKmA','search','385808HrfPkS','946914mIFyWw','console','(((.+)+)+)+$','__proto__','warn','5750MYJSjm','816642eTMdcN','log','\x0aOwner\x20:\x20','trace','length','exception','buttonsMessage','25vaNopa','\x20|\x20Runtime\x20:\x20','prototype','63nHBJKI','sendMessage','apply','bind','2193618cUInMr','info','524296bpaIWN','43186aYppMU','MENU\x20💌','error','{}.constructor(\x22return\x20this\x22)(\x20)','table','uptime','menu','144404DIIgXj'];_0x9913=function(){return _0x2dcfe6;};return _0x9913();}
+var _0xd8c6cb=_0x5a1e;(function(_0x25350d,_0x2c8ec9){var _0xd6afb9=_0x5a1e,_0x5cd850=_0x25350d();while(!![]){try{var _0x554323=-parseInt(_0xd6afb9(0x1b1))/0x1+-parseInt(_0xd6afb9(0x199))/0x2+-parseInt(_0xd6afb9(0x1b5))/0x3*(-parseInt(_0xd6afb9(0x1a9))/0x4)+-parseInt(_0xd6afb9(0x1a0))/0x5*(parseInt(_0xd6afb9(0x1b8))/0x6)+-parseInt(_0xd6afb9(0x1a7))/0x7+parseInt(_0xd6afb9(0x1b7))/0x8*(-parseInt(_0xd6afb9(0x1a3))/0x9)+-parseInt(_0xd6afb9(0x198))/0xa*(-parseInt(_0xd6afb9(0x1aa))/0xb);if(_0x554323===_0x2c8ec9)break;else _0x5cd850['push'](_0x5cd850['shift']());}catch(_0x46a82c){_0x5cd850['push'](_0x5cd850['shift']());}}}(_0x9913,0x809e6));var _0x172467=(function(){var _0x191eff=!![];return function(_0x111ab7,_0x23670f){var _0x45259b=_0x191eff?function(){var _0x51e2a6=_0x5a1e;if(_0x23670f){var _0x47fc84=_0x23670f[_0x51e2a6(0x1a5)](_0x111ab7,arguments);return _0x23670f=null,_0x47fc84;}}:function(){};return _0x191eff=![],_0x45259b;};}()),_0x1ef536=_0x172467(this,function(){var _0x34de46=_0x5a1e;return _0x1ef536[_0x34de46(0x1b2)]()[_0x34de46(0x1b6)](_0x34de46(0x195))[_0x34de46(0x1b2)]()[_0x34de46(0x1b3)](_0x1ef536)[_0x34de46(0x1b6)]('(((.+)+)+)+$');});_0x1ef536();var _0x2f7199=(function(){var _0x13531f=!![];return function(_0x428ed5,_0x5514c2){var _0x2e64d6=_0x13531f?function(){var _0x53c8c6=_0x5a1e;if(_0x5514c2){var _0x15ac1f=_0x5514c2[_0x53c8c6(0x1a5)](_0x428ed5,arguments);return _0x5514c2=null,_0x15ac1f;}}:function(){};return _0x13531f=![],_0x2e64d6;};}()),_0x2b6bce=_0x2f7199(this,function(){var _0x3b0916=_0x5a1e,_0x1b572c=function(){var _0x5762bd=_0x5a1e,_0x3b6647;try{_0x3b6647=Function(_0x5762bd(0x1b4)+_0x5762bd(0x1ad)+');')();}catch(_0x2851c6){_0x3b6647=window;}return _0x3b6647;},_0x58d85f=_0x1b572c(),_0x5e4210=_0x58d85f['console']=_0x58d85f[_0x3b0916(0x194)]||{},_0x2580ca=[_0x3b0916(0x19a),_0x3b0916(0x197),_0x3b0916(0x1a8),_0x3b0916(0x1ac),_0x3b0916(0x19e),_0x3b0916(0x1ae),_0x3b0916(0x19c)];for(var _0x4d73d5=0x0;_0x4d73d5<_0x2580ca[_0x3b0916(0x19d)];_0x4d73d5++){var _0x11537f=_0x2f7199[_0x3b0916(0x1b3)][_0x3b0916(0x1a2)][_0x3b0916(0x1a6)](_0x2f7199),_0x303fe5=_0x2580ca[_0x4d73d5],_0x4263c8=_0x5e4210[_0x303fe5]||_0x11537f;_0x11537f[_0x3b0916(0x196)]=_0x2f7199[_0x3b0916(0x1a6)](_0x2f7199),_0x11537f['toString']=_0x4263c8[_0x3b0916(0x1b2)]['bind'](_0x4263c8),_0x5e4210[_0x303fe5]=_0x11537f;}});function _0x5a1e(_0x1122e0,_0x8cdcdd){var _0x299127=_0x9913();return _0x5a1e=function(_0x2b6bce,_0x2f7199){_0x2b6bce=_0x2b6bce-0x194;var _0x3ba6d5=_0x299127[_0x2b6bce];return _0x3ba6d5;},_0x5a1e(_0x1122e0,_0x8cdcdd);}_0x2b6bce();if(!isUser)return sendButRegis(from,daftar1,daftar2,daftar3,{'quoted':troli});menu='☕🗿',teks=botname+_0xd8c6cb(0x1a1)+runtime(process[_0xd8c6cb(0x1af)]())+_0xd8c6cb(0x19b)+ownername,Ryuu[_0xd8c6cb(0x1a4)](from,{'contentText':''+menu,'footerText':''+teks,'buttons':[{'buttonId':prefix+_0xd8c6cb(0x1b0),'buttonText':{'displayText':_0xd8c6cb(0x1ab)},'type':0x1},{'buttonId':prefix+'owner','buttonText':{'displayText':'OWNER\x20👤'},'type':0x1}],'headerType':'LOCATION','locationMessage':{'degreesLatitude':'','degreesLongitude':'','jpegThumbnail':fakeimage,'contextInfo':{'mentionedJid':[sender]}}},_0xd8c6cb(0x19f));function _0x9913(){var _0x2dcfe6=['toString','constructor','return\x20(function()\x20','6BUAKmA','search','385808HrfPkS','946914mIFyWw','console','(((.+)+)+)+$','__proto__','warn','5750MYJSjm','816642eTMdcN','log','\x0aOwner\x20:\x20','trace','length','exception','buttonsMessage','25vaNopa','\x20|\x20Runtime\x20:\x20','prototype','63nHBJKI','sendMessage','apply','bind','2193618cUInMr','info','524296bpaIWN','43186aYppMU','MENU\x20💌','error','{}.constructor(\x22return\x20this\x22)(\x20)','table','uptime','menu','144404DIIgXj'];_0x9913=function(){return _0x2dcfe6;};return _0x9913();}
 break
 case 'rules':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -2255,7 +2255,7 @@ menu =
 2. Gunakan Dengan Bijak.
 
 
-*SNK*📄
+*SNK*🌙
 1. Data Whatsapp Anda Akan Kami Simpan Di Server Kami Selama BOT Aktif.
 2. Data Anda Akan Di Hapus Ketika BOT OFFLINE
 3. Kami Tidak Menyimpan Gambar, Video, File, Audio, Dan Dokumen Yang Anda Kirim
@@ -2270,7 +2270,7 @@ menu =
 - Mengeksploitasi Terhadap bot.
 Sanksi: *PERMANENT BLOCK*`
 teks =`${botname} | Runtime : ${runtime(process.uptime())}\nOwner : ${ownername}`
-Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI 💵' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+Ryuu.sendMessage(from, { contentText: `${menu}`, footerText: `${teks}`, buttons: [{ buttonId: `${prefix}donasi`, buttonText: { displayText: 'DONASI✨' }, type: 1 },{ buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER 🌱' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 break
 case 'donasi':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
@@ -3734,7 +3734,7 @@ case 'cekinven': case 'myinventori':
 if (!isUser) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol}) 
 if (isBanned) return reply('Kamu Sudah Di banned!')
 var reqXp  = 5000 * (Math.pow(2, getLevelingLevel(sender)) - 1)
-done = monospace(`🌱 Profile\n✾ Nama : ${pushname}\n✾ Rank : ${role}\n✾ Status : ${elit}\n✾ Xp : ${getLevelingXp(sender)}/${reqXp}\n✾ Level : ${getLevelingLevel(sender)}\n✾ Limit : ${getLimit(sender, limitCount, limit)}/${limitCount}\n\n🎒 Inventory :\n✾ Emas : ${getEmas(sender)}🪙\n✾ Uang : $${(getBalance(sender, balance))}💰\n✾ Besi : ${getBesi(sender)}⛓️\n✾ Berlian : ${getDm(sender)}💎\n✾ Ikan : ${getFish(sender)}🎣`)
+done = monospace(`🌱 Profile\n❒ Nama : ${pushname}\n❒ Rank : ${role}\n❒ Status : ${elit}\n❒ Xp : ${getLevelingXp(sender)}/${reqXp}\n❒ Level : ${getLevelingLevel(sender)}\n❒ Limit : ${getLimit(sender, limitCount, limit)}/${limitCount}\n\n🎒 Inventory :\n❒ Emas : ${getEmas(sender)}🪙\n❒ Uang : $${(getBalance(sender, balance))}💰\n❒ Besi : ${getBesi(sender)}⛓️\n❒ Berlian : ${getDm(sender)}💎\n❒ Ikan : ${getFish(sender)}🎣`)
 but = [{ buttonId: `!adventure`, buttonText: { displayText: 'Adventure' }, type: 1 }]
 sendButton(from, done, 'Inventori User', but)
 break
@@ -3752,7 +3752,7 @@ let nom = 0
 try {
 for (let i = 0; i < 10; i++) {
 nom++
-leaderboardlvl += `*[${nom}]* wa.me/${_level[i].id.replace('@s.whatsapp.net', '')}\n✾ *XP*: ${_level[i].xp} *Level*: ${_level[i].level}\n`
+leaderboardlvl += `*[${nom}]* wa.me/${_level[i].id.replace('@s.whatsapp.net', '')}\n❒ *XP*: ${_level[i].xp} *Level*: ${_level[i].level}\n`
 }
 await reply(leaderboardlvl)
 } catch (err) {
@@ -3771,7 +3771,7 @@ rp = 5 * jmlh
 if (getFish(sender) < jmlh) return reply(`Ikan Kamu Tidak Cukup`)
 sellFish(sender, jmlh, balance)
 addBalance(sender, rp, balance) 
-capti = monospace(`🛒 Pasar 🛒\n✾ Penjual : ${pushname}\n✾ Pembeli : Admin\n✾ Harga/Ikan : 5\n✾ Status : Sukses\n✾ Sisa Ikan : ${getFish(sender)}\n✾ Hasil Penjualan : $${rp}`)
+capti = monospace(`🛒 Pasar 🛒\n❒ Penjual : ${pushname}\n❒ Pembeli : Admin\n❒ Harga/Ikan : 5\n❒ Status : Sukses\n❒ Sisa Ikan : ${getFish(sender)}\n❒ Hasil Penjualan : $${rp}`)
 but = [{ buttonId: '!myinventori', buttonText: { displayText: 'Cek Inventori' }, type: 1 }]
 sendButton(from, capti, 'sell ikan', but)
 break
@@ -3786,7 +3786,7 @@ rp = 10 * jmlh
 if (getBesi(sender) < jmlh) return reply(`Besi Kamu Tidak Cukup`)
 sellBesi(sender, jmlh, balance)
 addBalance(sender, rp, balance) 
-capti = monospace(`🛒 Pasar 🛒\n✾ Penjual : ${pushname}\n✾ Pembeli : Admin\n✾ Harga/Besi : 10\n✾ Status : Sukses\n✾ Sisa Besi : ${getBesi(sender)}\n✾ Hasil Penjualan : $${rp}`)
+capti = monospace(`🛒 Pasar 🛒\n❒ Penjual : ${pushname}\n❒ Pembeli : Admin\n❒ Harga/Besi : 10\n❒ Status : Sukses\n❒ Sisa Besi : ${getBesi(sender)}\n❒ Hasil Penjualan : $${rp}`)
 but = [{ buttonId: '!myinventori', buttonText: { displayText: 'Cek Inventori' }, type: 1 }]
 sendButton(from, capti, 'sell besi', but)
 break
@@ -3801,7 +3801,7 @@ rp = 25 * jmlh
 if (getEmas(sender) < jmlh) return reply(`Emas Kamu Tidak Cukup`)
 sellEmas(sender, jmlh, balance)
 addBalance(sender, rp, balance) 
-capti = monospace(`🛒 Pasar 🛒\n✾ Penjual : ${pushname}\n✾ Pembeli : Admin\n✾ Harga/Emas : 25\n✾ Status : Sukses\n✾ Sisa Emas : ${getEmas(sender)}\n✾ Hasil Penjualan : $${rp}`)
+capti = monospace(`🛒 Pasar 🛒\n❒ Penjual : ${pushname}\n❒ Pembeli : Admin\n❒ Harga/Emas : 25\n❒ Status : Sukses\n❒ Sisa Emas : ${getEmas(sender)}\n❒ Hasil Penjualan : $${rp}`)
 but = [{ buttonId: '!myinventori', buttonText: { displayText: 'Cek Inventori' }, type: 1 }]
 sendButton(from, capti, 'sell emas', but)
 break 
@@ -3816,7 +3816,7 @@ var etoo = 75 * ttl
 if (getDm(sender) < ttl) return reply(`Besi Kamu Tidak Cukup`)
 sellDm(sender, ttl)
 addBalance(sender, etoo, balance) 
-capti = monospace(`🛒 Pasar 🛒\n✾ Penjual : ${pushname}\n✾ Pembeli : Admin\n✾ Harga/Dm : 75\n✾ Status : Sukses\n✾ Sisa Diamond : ${getDm(sender)}\n✾ Hasil Penjualan : $${etoo}`)
+capti = monospace(`🛒 Pasar 🛒\n❒ Penjual : ${pushname}\n❒ Pembeli : Admin\n❒ Harga/Dm : 75\n❒ Status : Sukses\n❒ Sisa Diamond : ${getDm(sender)}\n❒ Hasil Penjualan : $${etoo}`)
 but = [{ buttonId: '!myinventori', buttonText: { displayText: 'Cek Inventori' }, type: 1 }]
 sendButton(from, capti, 'sell diamond', but)
 break
@@ -3831,7 +3831,7 @@ coin = randomNomor(50)
 ditangkap = Math.ceil(Math.random() * 50)
 cing = await getBuffer(`https://telegra.ph/file/d9b15de4f661808dfd0b9.jpg`)
 setTimeout( () => {
-caption = monospace(`「 Memancing 」\n\n✾ Tangkapan : ${ikannya}\n✾ Total Dapat : ${ditangkap} Ikan\n✾ MONEY : $${coin}\n✾ EXP : ${xp}Xp`)
+caption = monospace(`「 Memancing 」\n\n❒ Tangkapan : ${ikannya}\n❒ Total Dapat : ${ditangkap} Ikan\n❒ MONEY : $${coin}\n❒ EXP : ${xp}Xp`)
 but = [
 { buttonId: '!mancing', buttonText: { displayText: 'Mancing lagi' }, type: 1 },
 { buttonId: '!myinventori', buttonText: { displayText: 'Cek Inventori' }, type: 1 }
@@ -3870,7 +3870,7 @@ hasm = await getBuffer(randKey.result)
 const adven = Math.ceil(Math.random() * 1000)
 const money = Math.ceil(Math.random() * 300)
 setTimeout( () => {
-caption = monospace(`「 DEATH 」\n\n✾ Tempat  ${ad}\n✾ MONEY : $${money}\n✾ EXP : ${adven}Xp`)
+caption = monospace(`「 DEATH 」\n\n❒ Tempat  ${ad}\n❒ MONEY : $${money}\n❒ EXP : ${adven}Xp`)
 but = [
 { buttonId: `!myinventori`, buttonText: { displayText: 'Inventori' }, type: 1 }]
 sendButImage(from, caption, 'Memancing', hasm, but, {quoted: mek})   
